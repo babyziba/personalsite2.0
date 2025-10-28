@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anita Jalili | Resume</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for footer icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-7S5GJ6uHcBqT1rZq9r3i7WQ4h3k1kR6w6N0c1l6k9t1E4Kz8Sg1l6Kz8Tg0V1Xj7W3fE2XwqQbY8Z3n2zVb2NA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation (no lists), fixed to top -->
+  <nav class="top-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="#about">AJ</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro / About -->
+  <header id="about" class="site-header container">
+    <img class="avatar" src="dwight.jpeg" alt="Anita Jalili headshot placeholder" />
+    <div class="intro">
+      <h1 class="name">Anita Jalili</h1>
+      <h2 class="tagline">Computer Science Student • Software Development • AI & Deep Learning Research • Robotics Educator</h2>
+      <p class="summary">
+        Computer Science major with a passion for tech that makes a difference. From placing 3rd in a national data science competition
+        to building hackathon apps and teaching robotics, I love turning ideas into impact. Director of Affairs of my university’s
+        Society of Software Engineers club, published author, and committed to using code for good. Always learning, always building.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Work Experience -->
+    <section id="work" class="section section-work">
+      <h2>Work Experience</h2>
+
+      <article class="job">
+        <h3 class="job-title">Research Internship</h3>
+        <p class="job-meta"><span class="company">National Science Institute</span> • <span class="dates">Fall 2025</span></p>
+        <p>Enhancing the Security and Resilience of Cyber-Physical Power Systems Against Sophisticated Cyber-Attacks</p>
+        <ul class="bullets">
+          <li>Selected as funded research fellow to advance projects at the intersection of AI, convex optimization,
+              cybersecurity, and smart power systems.</li>
+          <li>Conducting research prototypes leveraging machine learning and optimization aimed at improving grid
+              reliability by 20–30% efficiency in simulations.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3 class="job-title">Research Assistant</h3>
+        <p class="job-meta"><span class="company">CSUN CECS</span> • <span class="dates">Fall 2025</span></p>
+        <p>Exo Drone Development & Payload Integration</p>
+        <ul class="bullets">
+          <li>Collaborated with faculty to design and assemble a custom drone from scratch, integrating Raspberry
+            Pi as the onboard processor and implementing Python-based control pipelines.</li>
+          <li>Developed and tested drone capabilities for payload delivery, swarm coordination, and augmented
+            reality visualization using Unity to extend a game engine into a real-world drone controller.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3 class="job-title">Research Internship</h3>
+        <p class="job-meta"><span class="company">CSUN CECS</span> • <span class="dates">Summer 2025</span></p>
+        <p>Deep Learning with Obstacle Detection</p>
+        <ul class="bullets">
+          <li>Developed MLPs, CNNs, and PyTorch-based binary classifiers with data augmentation, dropout
+            regularization, performance tracking, and Optuna tuning.</li>
+          <li>Implemented YOLOv8 transfer learning on a custom dataset and achieved 90% detection accuracy,
+            enabling reliable obstacle classification in limited-data settings.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Leadership (with background image + gradient) -->
+    <section id="leadership" class="section section-edu bg-image">
+      <h2>Leadership</h2>
+      <article class="school">
+        <h3>California State University, Northridge</h3>
+        <p class="degree">B.S. in Computer Science • Expected May 2026</p>
+        <ul>
+          <li>Founder, CSUN’s Society of Software Engineers club (400+ members)</li>
+          <li>CSUN University Ambassador</li>
+          <li>3.99 GPA, Dean’s Honor List</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer & contact -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <h2>Let's connect</h2>
+      <nav class="links">
+        <a href="mailto:anita.jalili-kalhori.640@my.csun.edu"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://x.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-x-twitter"></i> X</a>
+      </nav>
+      <p class="copyright">Copyright 2025 by Anita Jalili</p>
+    </div>
+  </footer>
+
+  <!-- Small helper to close mobile address bar gaps on iOS -->
+  <script>
+    // No JS required for HW8; nav is CSS-fixed. This is just a safe-guard.
+  </script>
+</body>
+</html>

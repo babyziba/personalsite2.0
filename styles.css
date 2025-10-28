@@ -1,0 +1,157 @@
+/* ========== Variables ========== */
+:root{
+  --bg: #F3F4F6;
+  --text: #0F172A;
+  --muted: #475569;
+  --card: #FFFFFF;
+  --header-bg: #0f172a;
+  --section-bg: #E5E7EB;
+  --accent: #7C3AED;
+  --nav-height: 64px;
+}
+
+/* Reset / Base */
+*{ box-sizing: border-box; }
+html, body{ margin: 0; padding: 0; }
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+h1, h2, h3{
+  margin: 0 0 0.5rem 0;
+  line-height: 1.25;
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+h1{ font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
+h2{ font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 600; }
+h3{ font-size: 1.125rem; font-weight: 600; }
+
+/* Utilities */
+.container{ width: min(100%, 980px); margin: 0 auto; padding: 1.5rem; }
+a{ color: var(--accent); }
+a:hover{ text-decoration: underline; }
+
+/* ========== Fixed Top Nav (no lists) ========== */
+.top-nav{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: rgba(15, 23, 42, 0.95);
+  color: #fff;
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+.top-nav .nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.top-nav .brand{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+}
+.top-nav .nav-links{
+  display: flex;
+  gap: 1rem;
+}
+.top-nav .nav-links a{
+  color: #fff;
+  text-decoration: none;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.top-nav .nav-links a:hover{
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* Add top padding so content isn't hidden under fixed nav */
+body{ padding-top: var(--nav-height); }
+section[id]{ scroll-margin-top: calc(var(--nav-height) + 12px); }
+
+/* ========== Header ========== */
+.site-header{
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 1.25rem;
+  background: var(--header-bg);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  border-bottom: 4px solid rgba(255,255,255,0.08);
+}
+.avatar{
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.35);
+}
+.intro .name{ margin-bottom: 0.25rem; }
+.tagline{ font-weight: 600; opacity: 0.95; }
+.summary{ color: #E5E7EB; margin-top: 0.5rem; }
+
+/* ========== Sections / Cards ========== */
+.section{
+  background: var(--section-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+.section h2{ margin-bottom: 0.75rem; }
+
+.section-work .job,
+.section-edu .school{
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+.job-meta{ color: var(--muted); margin: 0 0 0.5rem 0; }
+.company{ font-weight: 600; }
+.dates{ font-style: italic; }
+.bullets{ margin: 0.5rem 0 0 1rem; }
+
+/* ========== Background image + RGBA gradient (HW8 #3) ========== */
+.bg-image{
+  /* Stack a semi-transparent gradient on top of an image */
+  background-image:
+    linear-gradient(to bottom right, rgba(15,23,42,0.7), rgba(124,58,237,0.55)),
+    url('dwight_resume.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.bg-image .school{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+}
+.bg-image a{ color: #fff; text-decoration: underline; }
+
+/* ========== Footer with Font Awesome icons (HW8 #2) ========== */
+.site-footer{
+  background: var(--header-bg);
+  color: #fff;
+  margin-top: 2rem;
+}
+.site-footer .container{ padding-block: 2rem; }
+.site-footer .links{
+  display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0 1rem;
+}
+.site-footer a{
+  color: #fff; text-decoration: none; border-bottom: 1px solid transparent;
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.site-footer a:hover{ border-color: rgba(255,255,255,0.5); }
+.copyright{ opacity: .8; font-size: .9rem; }
